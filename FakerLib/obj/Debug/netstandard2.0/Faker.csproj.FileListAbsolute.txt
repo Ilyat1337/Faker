@@ -1,0 +1,9 @@
+D:\!Университет\5 семестр\СПП\Faker\Faker\bin\Debug\netstandard2.0\Faker.deps.json
+D:\!Университет\5 семестр\СПП\Faker\Faker\bin\Debug\netstandard2.0\Faker.dll
+D:\!Университет\5 семестр\СПП\Faker\Faker\bin\Debug\netstandard2.0\Faker.pdb
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.csprojAssemblyReference.cache
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.dll
+D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstandard2.0\Faker.pdb
