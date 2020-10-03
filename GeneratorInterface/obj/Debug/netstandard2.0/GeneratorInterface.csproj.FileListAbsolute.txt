@@ -1,0 +1,8 @@
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\bin\Debug\netstandard2.0\GeneratorInterface.deps.json
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\bin\Debug\netstandard2.0\GeneratorInterface.dll
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\bin\Debug\netstandard2.0\GeneratorInterface.pdb
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\obj\Debug\netstandard2.0\GeneratorInterface.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\obj\Debug\netstandard2.0\GeneratorInterface.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\obj\Debug\netstandard2.0\GeneratorInterface.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\obj\Debug\netstandard2.0\GeneratorInterface.dll
+D:\!Университет\5 семестр\СПП\Faker\GeneratorInterface\obj\Debug\netstandard2.0\GeneratorInterface.pdb

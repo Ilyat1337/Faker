@@ -16,3 +16,6 @@ D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\nets
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\FakerLib.deps.json
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\FakerLib.dll
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\FakerLib.pdb
+D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\GeneratorInterface.dll
+D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\GeneratorInterface.pdb
+D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.csproj.CopyComplete

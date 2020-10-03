@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NjnyFimOMwfmgaoIKO5MfjCvZwgmVEKYreCnrcQSFL4NIOm4eqyrZxn13Et22f+/PE6Yjknd1LL32tU4kqETbw==",
+  "dgSpecHash": "4l7c9pWtw3L8H0jcupfen1WeDE0ocwhQBcBugmY0fkrMSp7kZe4erArQAz2IubE2QSJ4HseeechKpQefb0V7mg==",
   "success": true,
-  "projectFilePath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\FakerLib\\FakerLib.csproj",
+  "projectFilePath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\GeneratorInterface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ilyat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Ilyat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeneratorInterface;
+using System;
 
 namespace FakerLib.Generators
 {

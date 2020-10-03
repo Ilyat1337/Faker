@@ -25,16 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "GeneratorInterface/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/GeneratorInterface.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GeneratorInterface.dll": {}
-        }
       }
     }
   },
@@ -182,16 +172,10 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "GeneratorInterface/1.0.0": {
-      "type": "project",
-      "path": "../GeneratorInterface/GeneratorInterface.csproj",
-      "msbuildProject": "../GeneratorInterface/GeneratorInterface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "GeneratorInterface >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -201,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\!Университет\\5 семестр\\СПП\\Faker\\FakerLib\\FakerLib.csproj",
-      "projectName": "FakerLib",
-      "projectPath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\FakerLib\\FakerLib.csproj",
+      "projectUniqueName": "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\GeneratorInterface.csproj",
+      "projectName": "GeneratorInterface",
+      "projectPath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\GeneratorInterface.csproj",
       "packagesPath": "C:\\Users\\Ilyat\\.nuget\\packages\\",
-      "outputPath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\FakerLib\\obj\\",
+      "outputPath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ilyat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -220,11 +204,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\GeneratorInterface.csproj": {
-              "projectPath": "D:\\!Университет\\5 семестр\\СПП\\Faker\\GeneratorInterface\\GeneratorInterface.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
