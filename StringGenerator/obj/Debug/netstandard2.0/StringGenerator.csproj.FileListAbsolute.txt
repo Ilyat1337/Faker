@@ -1,0 +1,15 @@
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\bin\Debug\netstandard2.0\StringGenerator.deps.json
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\bin\Debug\netstandard2.0\StringGenerator.dll
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\bin\Debug\netstandard2.0\StringGenerator.pdb
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\bin\Debug\netstandard2.0\GeneratorInterface.dll
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\bin\Debug\netstandard2.0\GeneratorInterface.pdb
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.csprojAssemblyReference.cache
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.csproj.CopyComplete
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.dll
+D:\!Университет\5 семестр\СПП\Faker\StringGenerator\obj\Debug\netstandard2.0\StringGenerator.pdb
+D:\!Университет\5 семестр\СПП\Faker\Demonstration\Plugins\netstandard2.0\StringGenerator.deps.json
+D:\!Университет\5 семестр\СПП\Faker\Demonstration\Plugins\netstandard2.0\StringGenerator.dll
+D:\!Университет\5 семестр\СПП\Faker\Demonstration\Plugins\netstandard2.0\StringGenerator.pdb
