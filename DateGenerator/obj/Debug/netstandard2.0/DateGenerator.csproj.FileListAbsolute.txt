@@ -1,0 +1,12 @@
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\bin\Debug\netstandard2.0\DateGenerator.deps.json
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\bin\Debug\netstandard2.0\DateGenerator.dll
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\bin\Debug\netstandard2.0\DateGenerator.pdb
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\bin\Debug\netstandard2.0\GeneratorInterface.dll
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\bin\Debug\netstandard2.0\GeneratorInterface.pdb
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.csprojAssemblyReference.cache
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.csproj.CopyComplete
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.dll
+D:\!Университет\5 семестр\СПП\Faker\DateGenerator\obj\Debug\netstandard2.0\DateGenerator.pdb
