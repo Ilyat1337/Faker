@@ -10,7 +10,6 @@ D:\!Университет\5 семестр\СПП\Faker\Faker\obj\Debug\netstan
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.csprojAssemblyReference.cache
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.AssemblyInfoInputs.cache
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.AssemblyInfo.cs
-D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.csproj.CoreCompileInputs.cache
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.dll
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.pdb
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\FakerLib.deps.json
@@ -19,3 +18,4 @@ D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\nets
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\GeneratorInterface.dll
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\bin\Debug\netstandard2.0\GeneratorInterface.pdb
 D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.csproj.CopyComplete
+D:\!Университет\5 семестр\СПП\Faker\FakerLib\obj\Debug\netstandard2.0\FakerLib.csproj.CoreCompileInputs.cache

@@ -9,14 +9,27 @@ namespace FakerLib
 {
     public class Faker
     {
+        private static readonly string PLUGINS_FOLDER_NAME = "Plugins";
+
+        private static readonly List<IGenerator> loadedGenerators;
+
         private readonly Dictionary<Type, IGenerator> defaultGenerators;
         private readonly Dictionary<Type, IContainerGenerator> containerGenerators;
         private readonly HashSet<Type> typesInCreationProcess;
+
+        static Faker()
+        {
+            loadedGenerators = PluginLoader.LoadPlugins<IGenerator>(PLUGINS_FOLDER_NAME);
+        }
 
         public Faker()
         {
             defaultGenerators = new Dictionary<Type, IGenerator>();
             defaultGenerators.Add(typeof(int), new IntGenerator());
+
+            if (loadedGenerators != null)
+                foreach (IGenerator generator in loadedGenerators)
+                    defaultGenerators.Add(generator.Generate().GetType(), generator);
 
             containerGenerators = new Dictionary<Type, IContainerGenerator>();
             containerGenerators.Add(typeof(List<>), new GenericListGenerator(this));
