@@ -15,11 +15,22 @@ namespace FakerLib
 
         private readonly Dictionary<Type, IGenerator> defaultGenerators;
         private readonly Dictionary<Type, IContainerGenerator> containerGenerators;
+        private readonly Dictionary<Type, Dictionary<(string, Type), IGenerator>> userGenerators;
         private readonly HashSet<Type> typesInCreationProcess;
 
         static Faker()
         {
             loadedGenerators = PluginLoader.LoadPlugins<IGenerator>(PLUGINS_FOLDER_NAME);
+        }
+
+        public Faker(FakerConfig fakerConfig) : this()
+        {
+            foreach (var generatorInfo in fakerConfig.GetUserGenerators())
+            {
+                if (!userGenerators.ContainsKey(generatorInfo.Item1))
+                    userGenerators.Add(generatorInfo.Item1, new Dictionary<(string, Type), IGenerator>());
+                userGenerators[generatorInfo.Item1].Add((generatorInfo.Item2, generatorInfo.Item3), generatorInfo.Item4);
+            }
         }
 
         public Faker()
@@ -35,6 +46,7 @@ namespace FakerLib
             containerGenerators.Add(typeof(List<>), new GenericListGenerator(this));
 
             typesInCreationProcess = new HashSet<Type>();
+            userGenerators = new Dictionary<Type, Dictionary<(string, Type), IGenerator>>();
         }
 
         public T Create<T>()
@@ -42,14 +54,21 @@ namespace FakerLib
             return (T)Create(typeof(T));
         }
 
-        internal object Create(Type objectType)
+        internal object Create(Type obobjectType)
+        {
+            return Create(obobjectType, null, null);
+        }
+
+        internal object Create(Type objectType, Type classType, string memberName)
         {
             if (typesInCreationProcess.Contains(objectType))
                 return CreateDefaultValue(objectType);
             typesInCreationProcess.Add(objectType);
 
             object createdObject;
-            if (HasDefaultGeneratorFor(objectType))
+            if (HasUserGeneratorFor(classType, memberName, objectType))
+                createdObject = GenerateUsingUserGenerator(classType, memberName, objectType);
+            else if (HasDefaultGeneratorFor(objectType))
                 createdObject = GenerateUsingDefault(objectType);
             else if (IsGenericCollection(objectType))
                 createdObject = CreateGenericCollection(objectType);
@@ -60,6 +79,17 @@ namespace FakerLib
 
             typesInCreationProcess.Remove(objectType);
             return createdObject;
+        }
+
+        private bool HasUserGeneratorFor(Type classType, string memberName, Type returnType)
+        {
+            return classType != null && memberName != null &&
+                userGenerators.ContainsKey(classType) && userGenerators[classType].ContainsKey((memberName, returnType));
+        }
+
+        private object GenerateUsingUserGenerator(Type classType, string memberName, Type returnType)
+        {
+            return userGenerators[classType]?[(memberName, returnType)]?.Generate();
         }
 
         private bool HasDefaultGeneratorFor(Type objectType)
@@ -98,7 +128,7 @@ namespace FakerLib
         {
             object dtoObject = CreateUninitializedObject(objectType);
 
-            PropertyInfo[] properties = objectType.GetProperties();
+            PropertyInfo[] properties = objectType.GetProperties().Where(property => property.GetSetMethod() != null).ToArray();
             SetOjectPoperties(dtoObject, properties);
 
             FieldInfo[] fields = objectType.GetFields();
@@ -127,9 +157,29 @@ namespace FakerLib
 
         private ConstructorInfo ChooseBestConstructor(ConstructorInfo[] constructorInfos)
         {
-            return constructorInfos.ToList().Aggregate((firstCI, secondCI) =>
+            ConstructorInfo[] suitableConstructors = constructorInfos;
+            if (userGenerators.ContainsKey(constructorInfos[0].DeclaringType))
+            {
+                suitableConstructors = SelectConstructorsByFields(constructorInfos, 
+                                    userGenerators[constructorInfos[0].DeclaringType]);
+                if (suitableConstructors.Length == 0)
+                    suitableConstructors = constructorInfos;
+            }
+            return suitableConstructors.ToList().Aggregate((firstCI, secondCI) =>
                 firstCI.GetParameters().Length > secondCI.GetParameters().Length ? firstCI : secondCI
             );
+        }
+
+        private ConstructorInfo[] SelectConstructorsByFields(ConstructorInfo[] constructorInfos, 
+                                Dictionary<(string, Type), IGenerator> generatorsForClass)
+        {
+            return constructorInfos.Where(constructorInfo =>
+            {
+                foreach (ParameterInfo parameterInfo in constructorInfo.GetParameters())
+                    if (generatorsForClass.ContainsKey((parameterInfo.Name, parameterInfo.ParameterType)))
+                        return true;
+                return false;
+            }).ToArray();
         }
 
         private object InvokeConstructor(ConstructorInfo constructor)
@@ -137,7 +187,7 @@ namespace FakerLib
             List<object> parameters = new List<object>();
             foreach (ParameterInfo parameterInfo in constructor.GetParameters())
             {
-                parameters.Add(Create(parameterInfo.ParameterType));
+                parameters.Add(Create(parameterInfo.ParameterType, constructor.DeclaringType, parameterInfo.Name));
             }
             return constructor.Invoke(parameters.ToArray());
         }
@@ -145,13 +195,13 @@ namespace FakerLib
         private void SetOjectPoperties(object o, PropertyInfo[] properties)
         {
             foreach (PropertyInfo property in properties)
-                property.SetValue(o, Create(property.PropertyType));
+                property.SetValue(o, Create(property.PropertyType, o.GetType(), property.Name));
         }
 
         private void SetObjectFields(object o, FieldInfo[] fields)
         {
             foreach (FieldInfo field in fields)
-                field.SetValue(o, Create(field.FieldType));
+                field.SetValue(o, Create(field.FieldType, o.GetType(), field.Name));
         }
 
         private MethodInfo[] GetClassSetters(Type objectType)
