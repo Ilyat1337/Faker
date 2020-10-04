@@ -37,6 +37,9 @@ namespace FakerLib
         {
             defaultGenerators = new Dictionary<Type, IGenerator>();
             defaultGenerators.Add(typeof(int), new IntGenerator());
+            defaultGenerators.Add(typeof(byte), new ByteGenerator());
+            defaultGenerators.Add(typeof(double), new DoubleGenerator());
+            defaultGenerators.Add(typeof(long), new LongGenerator());
 
             if (loadedGenerators != null)
                 foreach (IGenerator generator in loadedGenerators)
@@ -121,6 +124,11 @@ namespace FakerLib
         {
             if (objectType.IsPrimitive)
                 return false;
+            List<MethodInfo> objectMethods = objectType.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly).
+                Where(methodInfo => !methodInfo.IsSpecialName).ToList();
+            foreach (MethodInfo objectMethod in objectMethods)
+                if (!(MethodCheckHelper.IsSetter(objectMethod) || MethodCheckHelper.IsGetter(objectMethod)))
+                    return false;
             return true;
         }
 

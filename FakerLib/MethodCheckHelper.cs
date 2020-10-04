@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
 namespace FakerLib
 {
@@ -14,6 +12,12 @@ namespace FakerLib
         {
             return method.Name.StartsWith(SETTER_PREFIX, StringComparison.CurrentCultureIgnoreCase)
                 && method.GetParameters().Length == 1;
+        }
+
+        public static bool IsGetter(MethodInfo method)
+        {
+            return method.Name.StartsWith(GETTER_PREFIX, StringComparison.CurrentCultureIgnoreCase)
+                && method.GetParameters().Length == 0;
         }
     }
 }
